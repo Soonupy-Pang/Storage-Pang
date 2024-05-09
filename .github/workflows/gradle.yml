@@ -1,0 +1,46 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            # EC2 인스턴스 내에서 spring boot 웹앱 실행하는데 필요한 Java 환경 설정
+            export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+            export PATH=$JAVA_HOME/bin:$PATH
+
+            # github 접근 시 인증 절차 생략
+            echo "https://${{ secrets.GH_USERNAME }}:${{ secrets.GH_PAT }}@github.com" > ~/.git-credentials
+            git config --global credential.helper store
+            
+            # application.properties 파일 생성
+            cd keemjipang/StoragePang/src/main/resources
+            echo "${{ secrets.PROPERTIES }}" > ./application.properties
+
+            # 변경 사항 pull 및 아티팩트(.jar) 생성
+            git pull origin
+            cd ../../..
+            ./gradlew build
+
+            # Docker 이미지 빌드 & 컨테이너 생성 및 실행
+            cd ..
+            TAG=$(date +%Y%m%d%H%M%S)
+            docker build --build-arg JAR_FILE=StoragePang/build/libs/demo-0.0.1-SNAPSHOT.jar --build-arg KEYSTORE_FILE=keystore.p12 -t demo-image:$TAG .
+            docker stop demo-container || true
+            docker rm demo-container || true
+            docker run --name demo-container -d -p 443:8443 demo-image:$TAG
