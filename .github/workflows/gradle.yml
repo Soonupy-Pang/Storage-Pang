@@ -3,7 +3,7 @@ name: Deploy to AWS EC2
 on:
   push:
     branches:
-      - main
+      - maind
 
 jobs:
   build-and-deploy:
@@ -42,4 +42,4 @@ jobs:
             docker build --build-arg JAR_FILE=Storage-Pang/build/libs/storagepang-0.0.1-SNAPSHOT.jar --build-arg KEYSTORE_FILE=keystore.p12 -t storagepang-image:$TAG .
             docker stop storagepang-container || true
             docker rm storagepang-container || true
-            docker run --name storagepang-container -d -p 443:8443 demo-image:$TAG
+            docker run --name storagepang-container -d -p 443:8443 storagepang-image:$TAG
