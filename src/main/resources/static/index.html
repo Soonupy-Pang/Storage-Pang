@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>Storage_Pang</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="image/storage_pang logo.svg">
+	<link rel="icon" type="image/png" sizes="96x96" href="image/storage_pang logo.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="image/storage_pang logo.svg">
+	<link rel="icon" type="image/png" sizes="16x16" href="image/storage_pang logo.svg">
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+    <!-- Reset CSS and Custom Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+
+<!-- favicon -->
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+
+    <!-- Swiper CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	
+    <!-- Your Custom JavaScript -->
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div id="wrap">
+      <div class="logo">Stroage<img src="image/storage_pang logo.svg" alt="">Pang</div>
+      <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+              <h1>Sign Up</h1>
+              <span>소셜로 가입</span>
+              <div class="social-container">
+                <a href="#" class="social"><i class=""><img src="image/kakaotalk-logo.svg" alt=""></i></a>
+                <a href="#" class="social"><i class="" style="width: 18px; filter:brightness(50%);"><img src="image/naver_logo.svg" alt=""></i></a>
+                <a href="#" class="social"><i class="" style="width: 20px;"><img src="image/google_logo.svg" alt=""></i></a>
+              </div>
+              <span>계정으로 가입</span>
+              <input type="email" placeholder="이메일" />
+              <input type="password" placeholder="비밀번호" />
+              <input type="password" placeholder="비밀번호 확인" />
+              <button>회원가입</button>
+            </form>
+          </div>
+          <div class="form-container sign-in-container">
+            <form action="#">
+              <h1>Sign In</h1>
+              <span>소셜로 로그인</span>
+              <div class="social-container">
+                <a href="#" class="social"><i class=""><img src="image/kakaotalk-logo.svg" alt=""></i></a>
+                <a href="#" class="social"><i class="" style="width: 18px; filter:brightness(50%);"><img src="image/naver_logo.svg" alt=""></i></a>
+                <a href="#" class="social"><i class="" style="width: 20px;"><img src="image/google_logo.svg" alt=""></i></a>
+              </div>
+              <span>계정으로 로그인</span>
+              <input type="email" placeholder="이메일" />
+              <input type="password" placeholder="비밀번호"/>
+              <!-- <a href="#">회원가입</a> -->
+              <button>로그인</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h3>이미 회원이신가요?</h3>
+                <p>지금 바로 지환이게 연락주세요.</p>
+                <button class="ghost" id="signIn">Sign In</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h3>회원이 아니신가요?</h3>
+                <p>섹스머신 지환이와 연애를 하고싶다면 가입하세요.</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+    $('#signUp').click(function() {
+        $('#container').addClass('right-panel-active');
+    });
+
+    $('#signIn').click(function() {
+        $('#container').removeClass('right-panel-active');
+    });
+});;
+</script>
+</html>
