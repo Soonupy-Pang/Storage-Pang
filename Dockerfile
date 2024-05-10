@@ -7,7 +7,7 @@ FROM openjdk:17
 # keystore.p12 파일 경로를 위한 ARG 추가
 
 ARG KEYSTORE_FILE=keystore.p12
-COPY ${KEYSTORE_FILE} keystore.p12
+COPY ${KEYSTORE_FILE} /app/keystore.p12
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 
@@ -15,4 +15,4 @@ COPY ${JAR_FILE} app.jar
 EXPOSE 8080
 
 # 애플리케이션 실행
-ENTRYPOINT ["java","-jar","app.jr"]
+ENTRYPOINT ["java","-jar","app.jar"]
