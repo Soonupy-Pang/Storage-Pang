@@ -105,6 +105,10 @@ main {
                         span {
                             color: #ffcb40;
                             /* font-weight: 300; */
+
+                            i{
+                                margin-right: 5px;
+                            }
                         }
                         p {
                             color: #ccc;
@@ -147,6 +151,7 @@ footer {
     .inner {
         max-width: 1024px;
         margin: 0 auto;
+        padding-inline: 40px;
 
         /* text-align: center; */
         padding-block: 30px;
@@ -154,6 +159,9 @@ footer {
         .attri{
             padding-bottom: 20px;
             border-bottom: 1px solid #fff;
+            /* width: 120%; */
+            /* padding-right: 40px; */
+            /* box-sizing: content-box; */
 
             h2{
                 font-size: 1.125em;
