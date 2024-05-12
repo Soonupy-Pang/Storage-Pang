@@ -127,7 +127,7 @@ main {
                             display: inline-block;
                             font-size: 14px;
                             margin-top: 14px;
-                            padding: 5px 15px;
+                            padding: 8px 16px;
                             text-align: center;
                             /* max-width: 100px; */
                             /* width: 33%; */
@@ -160,7 +160,7 @@ footer {
         padding-inline: 40px;
 
         /* text-align: center; */
-        padding-block: 30px;
+        padding-block: 20px;
 
         .attri{
             padding-bottom: 20px;
@@ -199,7 +199,7 @@ footer {
 }
 @media screen and (max-width:767px) {
     .wrap{
-        padding: 0 16px;
+        padding: 0 48px;
     }
     header {
         background-color: #444;
@@ -222,9 +222,9 @@ footer {
         
     }
     main {
-        margin-block: 80px;
+        margin-block: 60px;
         #course {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
     
             h2 {
                 line-height: 1;
@@ -256,6 +256,9 @@ footer {
                     overflow: hidden;
                     a {
                         color: #fff;
+                        .picture{
+                            display: none;
+                        }
                         .desc {
                             padding: 20px;
                             font-size: 13px;
@@ -289,7 +292,7 @@ footer {
                                 display: inline-block;
                                 font-size: 14px;
                                 margin-top: 14px;
-                                padding: 5px 15px;
+                                padding: 8px 16px;
                                 text-align: center;
                                 /* max-width: 100px; */
                                 /* width: 33%; */
@@ -322,7 +325,7 @@ footer {
             padding: 20px;
     
             .attri{
-                padding-bottom: 20px;
+                padding-bottom: 10px;
                 border-bottom: 1px solid #fff;
                 /* width: 120%; */
                 /* padding-right: 40px; */
@@ -349,7 +352,7 @@ footer {
                 }
             }
             .copyright{
-                margin-top: 20px;
+                margin-top: 10px;
                 color: #ccc;
                 font-weight: 100;
                 font-size: 0.875em;
