@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(0, 123, 255, 0.2);
+    background-color: rgba(0, 123, 255, 0.1);
 }
 
 .wrap {
@@ -50,9 +50,27 @@ header {
             }
         }
         .login{
+            display: flex;
+            gap: 32px;
             a{
+                position: relative;
                 display: block;
                 color: #fff;
+
+                &:first-child{
+                    /* padding-right: 16px; */
+                    &::after{
+                        /* margin-left: 16px; */
+                        position: absolute;
+                        content: '';
+                        width: 1px;
+                        height: 20%;
+                        background-color: #fff;
+                        top: 50%;
+                        right: -45%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
 
             }
         }
@@ -70,7 +88,7 @@ main {
             gap: 20px;
             padding-bottom: 20px;
             margin-bottom: 40px;
-            border-bottom: 2px solid #444;
+            border-bottom: 1px solid #444;
             max-width: 300px;
 
         }
@@ -232,7 +250,7 @@ footer {
                 gap: 20px;
                 padding-bottom: 20px;
                 margin-bottom: 40px;
-                border-bottom: 2px solid #444;
+                border-bottom: 1px solid #444;
                 max-width: 300px;
     
             }
