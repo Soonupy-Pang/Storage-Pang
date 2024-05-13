@@ -38,13 +38,46 @@ header {
                 
     
                 li {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-
-                    
                     a {
                         display: block;
                         font-size: 1em;
                         color: #fff;
+
+                        i{
+                            margin-left: 7px;
+                        }
+                    }
+
+                    .notion_menu{
+                        position: absolute;
+                        text-align: center;
+                        top: 90px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        /* left: 0; */
+                        background-color: #444;
+                        width: 140%;
+                        height: auto;
+                        border-radius: 10px;
+                        display: none;
+                        /* transform: translateX(-10%); */
+                        padding-block: 5px;
+
+                        &.menu_active{
+                            display: block;
+                        }
+                        
+                        a{
+                            display: block;
+                            line-height: 3;
+
+                        }
                     }
                 }
             }
@@ -99,7 +132,7 @@ main {
         ul {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: flex-start;
             gap: 30px;
 
             li {
@@ -155,6 +188,27 @@ main {
                                 background-color: #fff;
                                 color: #444;
                             }
+                        }
+                    }
+
+                    &.add_card{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        /* background-color: #666; */
+
+                        i{
+                            font-size: 2em;
+                            padding: 10px;
+                            border: 2px dashed #fff; /* 폭을 늘려 점선 간격을 조절 */
+                            height: 60px;
+                            width: 60px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                         }
                     }
                 }
