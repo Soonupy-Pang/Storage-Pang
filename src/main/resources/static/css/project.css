@@ -320,9 +320,9 @@ footer {
                         width: 200%;
                         background-color: #444;
                         border-radius: 10px;
-                        height: 370px;
+                        /* height: 370px; */
                         /* width: 140%; */
-                        padding: 20px;
+                        padding: 10px 20px;
 
                         li {
                             display: flex;
@@ -361,13 +361,14 @@ footer {
                                     display: flex;
                                     align-items: center;
                                     width: 100%;
-                                    line-height: 32px;
+                                    line-height: 2;
                                     /* display: block; */
                                     flex-grow: 1;
 
                                     a{
                                         display: inline-block;
-                                    padding-inline: 20px;
+                                    padding: 5px 20px;
+                                    /* font-size: 0.875em; */
 
                                     }
                                 }
