@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Storage_Pang</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="image/storage_pang logo.svg">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="image/storage_pang logo.svg">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="image/storage_pang logo.svg">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="image/storage_pang logo.svg">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+        <!-- Google Fonts -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;900&display=swap">
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap">
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+
+        <!-- Reset CSS and Custom Styles -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/project.css">
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet"/>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/static/img/favicon.ico">
+
+        <!-- Swiper CSS and JavaScript -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Your Custom JavaScript -->
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="dim"></div>
+        <header>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href=""><img src="image/storage_pang logo.svg" alt=""></a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a>PORTFOILO</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Kimjipang" target="_blank">GITHUB<i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://happygimy97.tistory.com/" target="_blank">BLOG<i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                        <li class="notion">
+                            <a href="">NOTION<i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i>
+                            </a>
+                            <div class="notion_menu">
+                                <a
+                                    href="https://available-snow-c33.notion.site/b58387b30ed24422ab97b273c2d7e0e9?pvs=74"
+                                    target="_blank">이력서</a>
+                                <a
+                                    href="https://available-snow-c33.notion.site/07a87899bfc046de9baa15e99047ae86?pvs=74"
+                                    target="_blank">자기소개서</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="login">
+                    <a href="index.html" id="loginLink">로그인</a>
+                    <!-- <a href="index.html" id="signupLink">회원가입</a> -->
+                </div>
+                <div id="tab">
+                    <a href="">
+                        <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+                    </a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="">포트폴리오</a></li>
+                            <li><a href="">GITHUB<i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></li>
+                            <li><a href="">BLOG<i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></li>
+                            <li><a href="">NOTION<i class="fa-solid fa-bars fa" style="color: #ffffff;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="wrap">
+            <main>
+                <div id="course">
+                    <h2>
+                        <a>PORTFOILO</a>
+                        <!-- <a href="">개발자 취업 코스</a> -->
+                    </h2>
+                    <p role="sub_title">99일의 마지막 관문인 실전 프로젝트에서는 동료 개발자, 디자이너와 협업하여 실제 서비스를 구현하고
+                        개발합니다. 현업 스프린트와 동일한 방식으로 런칭부터 개선까지 경험하게 됩니다.</p>
+                </div>
+                <div id="cards">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div class="picture"><img src="image/cards_thum.jpeg" alt=""></div>
+                                <div class="desc">
+                                    <h3>InSplace(In Seoul Place)</h3>
+                                    <span>
+                                        <i class="fa-solid fa-square-check fa-1xs" style="color: #ffcb40;"></i>팀원 전원 면접 제안, 네이버 자회사 취업</span>
+                                    <p>외국인의 사용을 위한 다국어 기능이 특징인, 현재 위치와 날씨를 기반으로 장소를 추천해 주는 서비스</p>
+                                    <em>React / Node.js</em>
+                                    <b>자세히 보기</b>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="picture"><img src="image/cards_thum.jpeg" alt=""></div>
+                                <div class="desc">
+                                    <h3>InSplace(In Seoul Place)</h3>
+                                    <span>
+                                        <i class="fa-solid fa-square-check fa-1xs" style="color: #ffcb40;"></i>팀원 전원 면접 제안, 네이버 자회사 취업</span>
+                                    <p>외국인의 사용을 위한 다국어 기능이 특징인, 현재 위치와 날씨를 기반으로 장소를 추천해 주는 서비스</p>
+                                    <em>React / Node.js</em>
+                                    <b>자세히 보기</b>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="picture"><img src="image/cards_thum.jpeg" alt=""></div>
+                                <div class="desc">
+                                    <h3>InSplace(In Seoul Place)</h3>
+                                    <span>
+                                        <i class="fa-solid fa-square-check fa-1xs" style="color: #ffcb40;"></i>팀원 전원 면접 제안, 네이버 자회사 취업</span>
+                                    <p>외국인의 사용을 위한 다국어 기능이 특징인, 현재 위치와 날씨를 기반으로 장소를 추천해 주는 서비스</p>
+                                    <em>React / Node.js</em>
+                                    <b>자세히 보기</b>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="picture"><img src="image/cards_thum.jpeg" alt=""></div>
+                                <div class="desc">
+                                    <h3>InSplace(In Seoul Place)</h3>
+                                    <span>
+                                        <i class="fa-solid fa-square-check fa-1xs" style="color: #ffcb40;"></i>팀원 전원 면접 제안, 네이버 자회사 취업</span>
+                                    <p>외국인의 사용을 위한 다국어 기능이 특징인, 현재 위치와 날씨를 기반으로 장소를 추천해 주는 서비스</p>
+                                    <em>React / Node.js</em>
+                                    <b>자세히 보기</b>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="add_card">
+                                <i class="fa-solid fa-plus fa-2xl" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <div class="inner">
+                <div class="attri">
+                    <h2>Attributor</h2>
+                    <div class="maker">
+                        <a href="https://github.com/Kimjipang">
+                            <i class="fa-brands fa-github" style="color: #ffffff;"></i>Storage Pang</a>
+                        <a href="https://github.com/soonupy">
+                            <i class="fa-brands fa-github" style="color: #ffffff;"></i>Soonupy</a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Copyright ©2024 Soonupy-Pang. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+        $(function () {
+            $('.notion > a').click(function (e) {
+                e.preventDefault();
+                $('.notion_menu').slideToggle(300);
+            });
+
+            $(document).click(function (e) {
+                if (!$(e.target).closest('.notion').length) {
+                    $('.notion_menu').slideUp(300);
+                }
+            });
+
+            // 창 크기가 변경될 때 메뉴를 자동으로 닫기
+            $(window).resize(function () {
+                $('.notion_menu').slideUp();
+            });
+        });
+    </script>
+</html>
