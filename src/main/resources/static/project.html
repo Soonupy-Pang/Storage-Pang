@@ -83,8 +83,12 @@
                             <a href="">NOTION<i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i>
                             </a>
                             <div class="notion_menu">
-                                <a href="https://available-snow-c33.notion.site/b58387b30ed24422ab97b273c2d7e0e9?pvs=74" target="_blank">이력서</a>
-                                <a href="https://available-snow-c33.notion.site/07a87899bfc046de9baa15e99047ae86?pvs=74" target="_blank">자기소개서</a>
+                                <a
+                                    href="https://available-snow-c33.notion.site/b58387b30ed24422ab97b273c2d7e0e9?pvs=74"
+                                    target="_blank">이력서</a>
+                                <a
+                                    href="https://available-snow-c33.notion.site/07a87899bfc046de9baa15e99047ae86?pvs=74"
+                                    target="_blank">자기소개서</a>
                             </div>
                         </li>
                     </ul>
@@ -93,9 +97,19 @@
                     <a href="index.html" id="loginLink">로그인</a>
                     <!-- <a href="index.html" id="signupLink">회원가입</a> -->
                 </div>
-                <!-- <div id="tab" class="mobile-tab"> <a href=""><i class="fa-solid fa-bars fa"
-                style="color: #ffffff;"></i></a> <div class="menu"> <a
-                href="#portfolio">포트폴리오</a> <a href="#study">스터디</a> </div> </div> -->
+                <div id="tab">
+                    <a href="">
+                        <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+                    </a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="">포트폴리오</a></li>
+                            <li><a href="">GITHUB<i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></li>
+                            <li><a href="">BLOG<i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></li>
+                            <li><a href="">NOTION<i class="fa-solid fa-bars fa" style="color: #ffffff;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
         <div class="wrap">
@@ -192,7 +206,18 @@
         $(function () {
             $('.notion > a').click(function (e) {
                 e.preventDefault();
-                $('.notion_menu').slideToggle('menu_active');
+                $('.notion_menu').slideToggle(300);
+            });
+
+            $(document).click(function (e) {
+                if (!$(e.target).closest('.notion').length) {
+                    $('.notion_menu').slideUp(300);
+                }
+            });
+
+            // 창 크기가 변경될 때 메뉴를 자동으로 닫기
+            $(window).resize(function () {
+                $('.notion_menu').slideUp();
             });
         });
     </script>
