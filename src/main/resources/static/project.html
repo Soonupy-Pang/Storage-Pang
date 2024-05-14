@@ -106,7 +106,13 @@
                             <li><a href="">포트폴리오</a></li>
                             <li><a href="">GITHUB<i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></li>
                             <li><a href="">BLOG<i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></li>
-                            <li><a href="">NOTION<i class="fa-solid fa-bars fa" style="color: #ffffff;"></i></a></li>
+                            <li class="notion_acod">
+                                <a href="#">NOTION<i class="fa-solid fa-chevron-down" style="color: #ffffff;"></i></a>
+                                <ul  class="acod_tab">
+                                    <li><a href="https://example.com/resume" target="_blank">이력서</a></li>
+                                    <li><a href="https://example.com/introduction" target="_blank">자기소개서</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -219,6 +225,28 @@
             $(window).resize(function () {
                 $('.notion_menu').slideUp();
             });
+            
+            
+        });
+        
+        $(function () {
+            $('.notion_acod > a').click(function (e) {
+                e.preventDefault();
+                $('.acod_tab').slideToggle(300);
+            });
+
+            $(document).click(function (e) {
+                if (!$(e.target).closest('.notion_acod').length) {
+                    $('.acod_tab').slideUp(300);
+                }
+            });
+
+            // 창 크기가 변경될 때 메뉴를 자동으로 닫기
+            $(window).resize(function () {
+                $('.acod_tab').slideUp();
+            });
+            
+            
         });
     </script>
 </html>
