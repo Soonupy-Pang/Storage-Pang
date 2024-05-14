@@ -232,9 +232,17 @@
         $(function () {
             $('.notion_acod > a').click(function (e) {
                 e.preventDefault();
-                $('.acod_tab').slideToggle(300);
+                $('.acod_tab','.acod_tab').slideToggle(300);
             });
 
+            $('.menu > ul').hide()
+
+            $('#tab').click(function (e) {
+                e.preventDefault();
+                $('.menu ul').slideToggle(300);
+            });
+
+            
             $(document).click(function (e) {
                 if (!$(e.target).closest('.notion_acod').length) {
                     $('.acod_tab').slideUp(300);
