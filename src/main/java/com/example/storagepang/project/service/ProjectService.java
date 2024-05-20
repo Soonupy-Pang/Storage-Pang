@@ -32,4 +32,24 @@ public class ProjectService {
         );
         return project;
     }
+
+    public Project updateProject(Long id, ProjectRequestDto projectRequestDto) {
+        Project project = projectRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("수정할 프로젝트가 없습니다.")
+        );
+        project.update(
+                projectRequestDto.getTitle(),
+                projectRequestDto.getContent()
+        );
+
+        Project updatedProject = projectRepository.save(project);
+        return updatedProject;
+    }
+
+    public void deleteBoard(Long id) {
+        Project project = projectRepository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("삭제하고자 하는 프로젝트가 없습니다.")
+        );
+        projectRepository.delete(project);
+    }
 }
