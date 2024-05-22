@@ -15,12 +15,6 @@ public class ProjectService {
     private final ProjectRepository projectRepository;
 
 
-    public Project createProject(ProjectRequestDto projectRequestDto) {
-        Project project = new Project(projectRequestDto.getTitle(), projectRequestDto.getContent());
-        Project savedProject = projectRepository.save(project);
-        return savedProject;
-    }
-
     public List<Project> getAllProjects() {
         List<Project> projectList = projectRepository.findAll();
         return projectList;
@@ -31,6 +25,12 @@ public class ProjectService {
                 () -> new RuntimeException("Project not found")
         );
         return project;
+    }
+
+    public Project createProject(ProjectRequestDto projectRequestDto) {
+        Project project = new Project(projectRequestDto.getTitle(), projectRequestDto.getContent());
+        Project savedProject = projectRepository.save(project);
+        return savedProject;
     }
 
     public Project updateProject(Long id, ProjectRequestDto projectRequestDto) {
