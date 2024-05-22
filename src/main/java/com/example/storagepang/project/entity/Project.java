@@ -6,7 +6,6 @@ import lombok.Getter;
 
 @Entity
 @Getter
-
 public class Project {
 
     @Id
