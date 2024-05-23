@@ -232,26 +232,31 @@
         $(function () {
             $('.notion_acod > a').click(function (e) {
                 e.preventDefault();
-                $('.acod_tab','.acod_tab').slideToggle(300);
+                $('.acod_tab').slideToggle(300);
             });
 
+            $('.acod_tab').hide()
             $('.menu > ul').hide()
 
-            $('#tab').click(function (e) {
+            $('#tab > a').click(function (e) {
                 e.preventDefault();
-                $('.menu ul').slideToggle(300);
+                // $('.menu > ul').slideUp(300);
+                $('.menu > ul').slideToggle(300);
+                $(".dim").toggleClass("active");
+
             });
 
             
-            $(document).click(function (e) {
-                if (!$(e.target).closest('.notion_acod').length) {
-                    $('.acod_tab').slideUp(300);
-                }
-            });
+            // $(document).click(function (e) {
+            //     if (!$(e.target).closest('.notion_acod').length) {
+            //         $('.acod_tab').slideToggle(300);
+            //     }
+            // });
 
             // 창 크기가 변경될 때 메뉴를 자동으로 닫기
             $(window).resize(function () {
                 $('.acod_tab').slideUp();
+                $(".dim").removeClass("active");
             });
             
             
