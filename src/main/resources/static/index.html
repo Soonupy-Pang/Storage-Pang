@@ -43,7 +43,7 @@
     <div id="wrap">
       <div class="logo"><a href="project.html">Stroage<img src="image/storage_pang logo.svg" alt="">Pang</a></div>
       <div class="container" id="container">
-        <div class="form-container sign-up-container">
+        <!-- <div class="form-container sign-up-container">
             <form action="#">
               <h1>Sign Up</h1>
               <span>소셜로 가입</span>
@@ -57,7 +57,7 @@
               <input type="password" placeholder="비밀번호" />
               <input type="password" placeholder="비밀번호 확인" />
               <button>회원가입</button>
-            </form>
+            </form> -->
           </div>
           <div class="form-container sign-in-container">
             <form action="#">
@@ -68,14 +68,20 @@
                 <a href="#" class="social"><i class="" style="width: 18px; filter:brightness(50%);"><img src="image/naver_logo.svg" alt=""></i></a>
                 <a href="#" class="social"><i class="" style="width: 20px;"><img src="image/google_logo.svg" alt=""></i></a>
               </div>
-              <span>계정으로 로그인</span>
+              <span class="signin-span">계정으로 로그인</span>
               <input type="email" placeholder="이메일" />
               <input type="password" placeholder="비밀번호"/>
+              <input type="password" placeholder="비밀번호 확인" name="pw_confirm">
               <!-- <a href="#">회원가입</a> -->
               <button>로그인</button>
+              <div class="signup">
+                <p>계정이 없으신가요?</p>
+                <a href="#" id="signup-link">회원가입<i class="fa-solid fa-chevron-right fa-1xs" style="color: #444444;"></i></a>
+              </div>
+              </div>
             </form>
           </div>
-          <div class="overlay-container">
+          <!-- <div class="overlay-container">
             <div class="overlay">
               <div class="overlay-panel overlay-left">
                 <h3>이미 회원이신가요?</h3>
@@ -88,7 +94,7 @@
                 <button class="ghost" id="signUp">Sign Up</button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
     </div>
 </body>
@@ -101,6 +107,39 @@
     $('#signIn').click(function() {
         $('#container').removeClass('right-panel-active');
     });
-});;
+
+    
+});
+
+    $('#signup-link').click(function() {
+        var pwConfirm = $('[name="pw_confirm"]');
+        var signupText = $('.signup p');
+        var buttonText = $('form button');
+        var signupLinkText = $('#signup-link');
+        var socialText = $('.form-container.sign-in-container span:first');
+        var signInTitle = $('.form-container.sign-in-container h1'); // 로그인/회원가입 제목 위치
+        var accountSpan = $('.form-container.sign-in-container span').last();
+
+        if (pwConfirm.css('display') === 'none') {
+            pwConfirm.css('display', 'block');
+            signupText.text('이미 계정이 있으신가요?');
+            buttonText.text('회원가입');
+            socialText.text('소셜로 회원가입');
+            accountSpan.text('계정으로 회원가입');
+            signupLinkText.html('로그인<i class="fa-solid fa-chevron-right fa-1xs" style="color: #444444;"></i>');
+            signInTitle.text('Sign Up'); // 제목을 'Sign Up'으로 변경
+        } else {
+            pwConfirm.css('display', 'none');
+            signupText.text('계정이 없으신가요?');
+            buttonText.text('로그인');
+            socialText.text('소셜로 로그인');
+            accountSpan.text('계정으로 로그인');
+            signupLinkText.html('회원가입<i class="fa-solid fa-chevron-right fa-1xs" style="color: #444444;"></i>');
+            signInTitle.text('Sign In'); // 제목을 'Sign In'으로 변경
+        }
+    });
+
+
+
 </script>
 </html>
